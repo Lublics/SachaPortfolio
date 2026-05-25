@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sacha Poussy — Développeur Full-Stack</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Sacha Poussy</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="about.html">Profil</a></li>
+        <li><a href="bts-sio.html">BTS SIO</a></li>
+        <li><a href="veille.html">Veille</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="assets/cv-sacha.pdf" class="btn-cv-nav" target="_blank">Mon CV</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid-lines"></div>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-eyebrow">
+          <div class="eyebrow-line"></div>
+          <span>Développeur Full-Stack · BTS SIO SLAM</span>
+        </div>
+        <h1 class="hero-title">SACHA<br><em>POUSSY</em></h1>
+        <p class="hero-subtitle">Alternant au Groupe Vittori</p>
+        <p class="hero-desc">
+          Passionné par le développement web, je transforme des besoins métiers complexes en solutions logicielles élégantes. Je suis actuellement en 2ème année de BTS SIO.
+        </p>
+        <div class="hero-actions">
+          <a href="projets.html" class="btn-primary">
+            <span>Voir mes projets</span>
+            <span>→</span>
+          </a>
+          <a href="assets/cv-sacha.pdf" class="btn-ghost" target="_blank">
+            <span>Télécharger mon CV</span>
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-photo-frame">
+          <img src="assets/img/photocv.jpg" alt="Sacha Poussy">
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-mouse"></div>
+      <span>Défiler</span>
+    </div>
+  </section>
+
+  <!-- ABOUT STRIP -->
+  <section class="section about-strip">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <div class="section-eyebrow"><span>À propos</span></div>
+          <h2 class="section-title">Une nouvelle<br><em>opportunité</em></h2>
+          <p style="margin-top:24px;">
+            Étudiant sérieux et impliqué, j'allie rigueur technique et sens du travail en équipe. Mon alternance chez le Groupe Vittori m'a permis de développer des compétences concrètes en développement Full-Stack (PHP, SQL, MVC).
+          </p>
+          <p>
+            Engagé trois ans dans le Conseil de la Vie Lycéenne, j'ai forgé un goût prononcé pour la collaboration et la recherche de solutions collectives.
+          </p>
+          <div class="about-tags">
+            <span class="tag-pill">⚡ Sérieux & Volontaire</span>
+            <span class="tag-pill">🤝 Esprit d'équipe</span>
+            <span class="tag-pill">🚗 Permis B</span>
+            <span class="tag-pill">🎓 BTS SIO SLAM</span>
+            <span class="tag-pill">📍 Belfort</span>
+          </div>
+        </div>
+        <div class="stats-grid reveal reveal-delay-1">
+          <div class="stat-card">
+            <span class="stat-number">2+</span>
+            <span class="stat-label">Ans d'alternance</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Ans au CVL</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">PHP</span>
+            <span class="stat-label">Langage principal</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">MVC</span>
+            <span class="stat-label">Architecture maîtrisée</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="divider"></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">S.P.</div>
+      <p class="footer-copy">© 2026 Sacha Poussy. Tous droits réservés.</p>
+      <div class="footer-links">
+        <a href="projets.html">Projets</a>
+        <a href="about.html">Profil</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Sticky nav
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
