@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sacha Poussy — Mon Profil</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .carousel { position: relative; width: 100%; max-width: 800px; margin: 0 auto; user-select: none; }
+    .carousel-track-wrap { overflow: hidden; border-radius: 4px; }
+    .carousel-track { display: flex; transition: transform 0.45s cubic-bezier(0.4,0,0.2,1); align-items: flex-start; }
+    .carousel-slide { min-width: 100%; }
+    .carousel-slide img { width: 100%; height: auto; display: block; }
+    .carousel-slide-placeholder { background: rgba(201,168,76,0.06); display: flex; align-items: center; justify-content: center; }
+    .carousel-slide-placeholder span { font-family: var(--font-display,'Georgia',serif); font-size: 0.8rem; letter-spacing: 0.15em; color: var(--muted,#888); text-transform: uppercase; }
+    .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); z-index: 10; background: rgba(10,14,28,0.75); border: 1px solid rgba(201,168,76,0.35); color: #c9a84c; width: 44px; height: 44px; border-radius: 50%; font-size: 1.8rem; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s, border-color 0.2s; }
+    .carousel-btn:hover { background: rgba(201,168,76,0.15); border-color: rgba(201,168,76,0.7); }
+    .carousel-btn-prev { left: -22px; }
+    .carousel-btn-next { right: -22px; }
+    .carousel-dots { display: flex; justify-content: center; gap: 8px; margin-top: 16px; }
+    .carousel-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(201,168,76,0.25); border: none; cursor: pointer; padding: 0; transition: background 0.2s, transform 0.2s; }
+    .carousel-dot.active { background: #c9a84c; transform: scale(1.3); }
+    @media (max-width: 640px) { .carousel-btn-prev { left: 4px; } .carousel-btn-next { right: 4px; } }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Sacha Poussy</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="about.html" class="active">Profil</a></li>
+        <li><a href="bts-sio.html">BTS SIO</a></li>
+        <li><a href="veille.html">Veille</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="assets/cv-sacha.pdf" class="btn-cv-nav" target="_blank">Mon CV</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="page-header-bg"></div>
+    <div class="page-header-inner">
+      <div class="section-eyebrow"><span>Qui suis-je ?</span></div>
+      <h1>Mon<br><em>Profil</em></h1>
+      <p>Développeur passionné, photographe amateur, sportif.</p>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="about-grid reveal">
+        <div class="about-text">
+          <div class="section-eyebrow"><span>Profil</span></div>
+          <h2 class="section-title">Sérieux,<br><em>impliqué</em></h2>
+          <p style="margin-top:24px;">
+            Actuellement étudiant en 2ème année de <strong style="color: var(--gold-light)">BTS SIO à Belfort</strong>, option SLAM, je suis reconnu pour mon sérieux et mon implication constante dans mon travail.
+          </p>
+          <p>
+            Mon parcours est marqué par un engagement citoyen de trois ans au sein du <strong style="color: var(--gold-light)">Conseil de la Vie Lycéenne</strong>, ce qui a forgé mon goût pour le travail en équipe et la recherche de solutions collectives.
+          </p>
+          <p>Ponctuel, volontaire, titulaire du permis B depuis 2023 — je suis pleinement motivé à mettre mon dynamisme au service d'une équipe technique ambitieuse.</p>
+          <div class="about-tags" style="margin-top: 32px;">
+            <span class="tag-pill">Sérieux & Volontaire</span>
+            <span class="tag-pill">Engagement CVL</span>
+            <span class="tag-pill">Permis B (2023)</span>
+            <span class="tag-pill">Ponctuel</span>
+            <span class="tag-pill">🇫🇷 Français (natif)</span>
+            <span class="tag-pill">🇬🇧 Anglais (pro)</span>
+          </div>
+        </div>
+        <div class="stats-grid reveal reveal-delay-1">
+          <div class="stat-card">
+            <span class="stat-number">2</span>
+            <span class="stat-label">Langues parlées</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Ans au CVL</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">21</span>
+            <span class="stat-label">Ans</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">📸</span>
+            <span class="stat-label">Photographie</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PHOTOGRAPHY -->
+  <section class="section" style="background: var(--navy-mid);">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <div class="section-eyebrow"><span>Centres d'intérêt</span></div>
+        <h2 class="section-title">Passions &amp;<br><em>Découvertes</em></h2>
+      </div>
+
+      <!-- Photography -->
+      <div class="gallery-block reveal">
+        <div class="gallery-header">
+          <h3>La Photographie</h3>
+          <p>Capturer des moments et des paysages pour observer le monde avec précision et créativité.</p>
+        </div>
+        <div class="carousel" id="carousel-photo">
+          <button class="carousel-btn carousel-btn-prev" onclick="moveCarousel('carousel-photo', -1)">&#8249;</button>
+          <div class="carousel-track-wrap">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="assets/img/piscine.jpg" alt="Piscine"></div>
+              <div class="carousel-slide"><img src="assets/img/colmar.jpg" alt="Colmar by night"></div>
+              <div class="carousel-slide"><img src="assets/img/fleur.jpg" alt="Fleurs"></div>
+            </div>
+          </div>
+          <button class="carousel-btn carousel-btn-next" onclick="moveCarousel('carousel-photo', 1)">&#8250;</button>
+          <div class="carousel-dots" id="dots-carousel-photo"></div>
+        </div>
+      </div>
+
+
+      <div class="gallery-block reveal">
+        <div class="gallery-header">
+          <h3>Le sport</h3>
+          <p>Cela me permet de renforcer ma santé ainsi que ma discipline</p>
+        </div>
+        <div class="carousel" id="carousel-social">
+          <button class="carousel-btn carousel-btn-prev" onclick="moveCarousel('carousel-social', -1)">&#8249;</button>
+          <div class="carousel-track-wrap">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="assets/img/balade.jpg" alt="balade"></div>
+              <div class="carousel-slide"><img src="assets/img/ballon.jpg" alt="ballon"></div>
+              <div class="carousel-slide"><img src="assets/img/vent.jpg" alt="vent"></div>
+            </div>
+          </div>
+          <button class="carousel-btn carousel-btn-next" onclick="moveCarousel('carousel-social', 1)">&#8250;</button>
+          <div class="carousel-dots" id="dots-carousel-social"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <div class="divider"></div>
+
+  <!-- PARCOURS -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <div class="section-eyebrow"><span>Parcours</span></div>
+        <h2 class="section-title">Formation &amp;<br><em>Expérience</em></h2>
+      </div>
+
+      <div class="timeline-container reveal">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Sept 2024 – Août 2026</div>
+          <h3>Alternant en Informatique</h3>
+          <div class="company">Groupe Vittori · Audincourt</div>
+          <p>Développement Full-Stack, conception logicielle et gestion de bases de données au sein d'une équipe technique professionnelle.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2024 – 2026</div>
+          <h3>BTS SIO — Option SLAM</h3>
+          <div class="company">Belfort</div>
+          <p>Solutions Logicielles et Applications Métiers. Spécialisation en développement d'applications et programmation.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Été 2022 &amp; 2023</div>
+          <h3>Employé Polyvalent</h3>
+          <div class="company">Carrefour · Les Portes-en-Ré</div>
+          <p>Expérience en grande distribution : rigueur opérationnelle, gestion du temps et travail en équipe au service de la satisfaction client.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2019 – 2023</div>
+          <h3>Baccalauréat</h3>
+          <div class="company">Lycée Condorcet · Belfort</div>
+          <p>Options Mathématiques Expertes, Numérique et Science Informatique, Anglais Section Européenne.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">S.P.</div>
+      <p class="footer-copy">© 2026 Sacha Poussy. Tous droits réservés.</p>
+      <div class="footer-links">
+        <a href="projets.html">Projets</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+
+    // Carousel logic
+    const carousels = {};
+    function initCarousel(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const track = el.querySelector('.carousel-track');
+      const slides = el.querySelectorAll('.carousel-slide');
+      const dotsContainer = document.getElementById('dots-' + id);
+      const total = slides.length;
+      carousels[id] = { track, total, current: 0 };
+      for (let i = 0; i < total; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+        dot.addEventListener('click', () => goTo(id, i));
+        dotsContainer.appendChild(dot);
+      }
+      // Touch/swipe support
+      let startX = 0;
+      el.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+      el.addEventListener('touchend', e => {
+        const diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) moveCarousel(id, diff > 0 ? 1 : -1);
+      });
+    }
+    function goTo(id, index) {
+      const c = carousels[id];
+      c.current = (index + c.total) % c.total;
+      c.track.style.transform = `translateX(-${c.current * 100}%)`;
+      document.getElementById('dots-' + id).querySelectorAll('.carousel-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === c.current);
+      });
+    }
+    function moveCarousel(id, dir) { goTo(id, carousels[id].current + dir); }
+    ['carousel-photo', 'carousel-animals', 'carousel-social'].forEach(initCarousel);
+  </script>
+
+</body>
+</html>
